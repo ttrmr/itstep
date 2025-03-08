@@ -17,3 +17,20 @@
 # p1=Pupil('Яна',12,'Дніпро',7)
 # print(p1.stydu())
 # p1.info() #метод info знаход у кл Human
+
+class Comp:
+    def __init__(self,model):
+        super().__init__()
+        self.model=model
+        self.memory=256
+class Display:
+    def __init__(self):
+        super().__init__()
+        self.resolution='4k'
+
+class Smart(Comp,Display): #множинне наслідування
+    def info(self):
+        print('Смартфон моделі',self.model,'має параметри:',self.memory,"Мб пам'яти та розширення дісплея",self.resolution)
+
+telephone1=Smart('Xioma')
+telephone1.info()
